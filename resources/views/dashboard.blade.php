@@ -16,6 +16,17 @@
             </x-button>
 
         </x-form>
+
+        <hr class="border-gray-700 border-dashed mt-4">
+
+        <div class="dark:text-gray-400 space-y-4">
+            @foreach($questions as $item)
+                <x-question
+                    :question="$item->question"
+                />
+            @endforeach
+        </div>
+
     </x-container>
 
 </x-app-layout>
